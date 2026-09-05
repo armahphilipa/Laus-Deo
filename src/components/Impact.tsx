@@ -78,7 +78,7 @@ export const Impact: React.FC = () => {
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-[#202020] flex items-center justify-between text-[11px] font-semibold text-[#FFEE32] uppercase tracking-wider">
+              <div id="impact-card-sustainability" className="mt-6 pt-4 border-t border-[#202020] flex items-center justify-between text-[11px] font-semibold text-[#FFEE32] uppercase tracking-wider">
                 <span>Direct Beneficiary Impact</span>
                 <span>✓</span>
               </div>
