@@ -272,7 +272,7 @@ html.light span.bg-\[\#FFEE32\] {
 /* General yellow text elements - high readability on light canvas */
 html.light .text-\[\#FFEE32\],
 html.light .text-\[\#ffe800\] {
-  color: #202020 !important;
+  /*color: #202020 !important;*/
   font-weight: 700 !important;
 }
 
@@ -438,5 +438,9 @@ html.light footer {
 html.light #progress {
   background-color: #FFEE32 !important;
   box-shadow: 0 0 10px rgba(255, 238, 50, 0.6) !important;
+}
+
+#impact-card-sustainability span {
+  color: #FFEE32 !IMPORTANT;
 }
 
