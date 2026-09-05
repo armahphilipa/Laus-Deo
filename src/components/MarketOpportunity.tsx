@@ -73,7 +73,7 @@ export const MarketOpportunity: React.FC = () => {
                 </p>
               </div>
 
-              <div className="mt-8 pt-4 border-t border-white/10 text-[11px] font-semibold text-[#FFEE32] uppercase tracking-wider">
+              <div id="impact-card-text" className="mt-8 pt-4 border-t border-white/10 text-[11px] font-semibold text-[#FFEE32] uppercase tracking-wider">
                 Strategic Advantage
               </div>
             </motion.div>
