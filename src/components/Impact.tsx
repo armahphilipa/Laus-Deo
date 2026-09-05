@@ -78,9 +78,9 @@ export const Impact: React.FC = () => {
                 </p>
               </div>
 
-              <div id="impact-card-text" className="mt-6 pt-4 border-t border-[#202020] flex items-center justify-between text-[11px] font-semibold text-[#FFEE32] uppercase tracking-wider">
+              <div className="mt-6 pt-4 border-t border-[#202020] flex items-center justify-between text-[11px] font-semibold text-[#FFEE32] uppercase tracking-wider">
                 <span>Direct Beneficiary Impact</span>
-                <span>✓</span>
+                <span id="impact-card-text">✓</span>
               </div>
             </motion.div>
           ))}
