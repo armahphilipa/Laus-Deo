@@ -51,14 +51,16 @@ export const MarketOpportunity: React.FC = () => {
               className="bg-[#333533]/80 hover:bg-[#333533] border border-[#333533] hover:border-[#FFEE32]/50 backdrop-blur-md rounded-2xl p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
             >
               <div>
-                <div className="flex items-center justify-between mb-4">
+                <div id="impact-card-sustainability" className="flex items-center justify-between mb-4">
                   <span className="font-display font-bold text-2xl text-[#FFEE32]">
                     {card.number}
                   </span>
-                  <div className="p-2 rounded-lg bg-[#202020] border border-[#333533] text-[#FFEE32]">
-                    {idx === 0 && <Award className="w-5 h-5 text-[#FFEE32]" />}
-                    {idx === 1 && <DollarSign className="w-5 h-5 text-[#FFEE32]" />}
-                    {idx === 2 && <Handshake className="w-5 h-5 text-[#FFEE32]" />}
+                  <div id="impact-card-sustainability" className="p-2 rounded-lg bg-[#202020] border border-[#333533] text-[#FFEE32]">
+                    <span>
+                      {idx === 0 && <Award className="w-5 h-5 text-[#FFEE32]" />}
+                      {idx === 1 && <DollarSign className="w-5 h-5 text-[#FFEE32]" />}
+                      {idx === 2 && <Handshake className="w-5 h-5 text-[#FFEE32]" />}
+                    </span>
                   </div>
                 </div>
 
