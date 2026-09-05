@@ -22,7 +22,7 @@ export const VisionMission: React.FC = () => {
           </div>
 
           <p className="font-display text-2xl sm:text-3xl lg:text-3xl font-semibold leading-snug text-[#FFFFFF]">
-            “To become a leading Ghanaian and regional provider of industrial coatings, marine solutions, and locally manufactured marine materials — contributing to safer transportation systems and sustainable industrial growth.”
+            “To become a leading Ghanaian and regional provider of industrial coatings, marine solutions, and locally manufactured marine materials contributing to safer transportation systems and sustainable industrial growth.”
           </p>
         </div>
       </motion.div>
