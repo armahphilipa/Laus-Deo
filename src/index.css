@@ -328,7 +328,7 @@ html.light .bg-\[\#FFEE32\]\/10,
 html.light .bg-\[\#FFEE32\]\/15,
 html.light .bg-\[\#FFEE32\]\/20 {
   background-color: #FFEE32 !important;
-  color: #202020 !important;
+  color: #FFEE32!important;
   border: 1px solid #FFEE32 !important;
   font-weight: 700 !important;
 }
