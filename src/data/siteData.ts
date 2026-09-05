@@ -28,7 +28,7 @@ export const servicesData: ServiceItem[] = [
   {
     id: 'industrial-coatings',
     title: 'Industrial & protective coatings',
-    description: 'High-performance protective coatings engineered for infrastructure and industrial facilities against Ghana’s tropical climate and heavy industrial wear — from surface preparation and technical specification to professional application.',
+    description: 'High-performance protective coatings engineered for infrastructure and industrial facilities against Ghana’s tropical climate and heavy industrial wear from surface preparation and technical specification to professional application.',
     isCore: true,
     tag: 'Core service',
     iconName: 'Shield',
