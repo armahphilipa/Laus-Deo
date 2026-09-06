@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { partnershipPillars } from '../data/siteData';
 import { InquiryFormData } from '../types';
-import { Send, CheckCircle2, Building, Mail, Phone, MapPin, Handshake, ArrowRight, RefreshCw } from 'lucide-react';
+import { Send, CheckCircle2, Mail, Phone, MapPin, Handshake, ArrowRight, RefreshCw } from 'lucide-react';
 
 export const PartnershipSection: React.FC = () => {
   const [formData, setFormData] = useState<InquiryFormData>({
@@ -14,18 +14,29 @@ export const PartnershipSection: React.FC = () => {
     message: '',
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submittedData, setSubmittedData] = useState<InquiryFormData | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
 
-    // Simulate seamless submission feedback
-    setTimeout(() => {
-      setSubmittedData({ ...formData });
-      setIsSubmitting(false);
-    }, 600);
+    // Construct email subject and formatted body text
+    const subject = encodeURIComponent(`Partnership Inquiry: ${formData.interest} - ${formData.name}`);
+    const bodyText = `Name: ${formData.name}
+Organization: ${formData.organization || 'N/A'}
+Email: ${formData.email}
+Phone: ${formData.phone || 'N/A'}
+Category: ${formData.interest}
+
+Message:
+${formData.message || 'No additional message provided.'}`;
+
+    const body = encodeURIComponent(bodyText);
+
+    // Trigger the client's default email client
+    window.location.href = `mailto:kendudxp@gmail.com?subject=${subject}&body=${body}`;
+
+    // Update state to show confirmation feedback
+    setSubmittedData({ ...formData });
   };
 
   const handleReset = () => {
@@ -152,10 +163,10 @@ export const PartnershipSection: React.FC = () => {
 
                   <div>
                     <h3 className="font-display text-2xl font-bold text-[#FFFFFF]">
-                      Inquiry Successfully Received
+                      Email App Opened
                     </h3>
                     <p className="text-sm text-[#D6D6D6]/80 mt-2 max-w-md mx-auto">
-                      Thank you, <strong className="text-[#FFFFFF]">{submittedData.name}</strong>. Our partnership desk has recorded your inquiry regarding <span className="font-medium text-[#FFEE32]">{submittedData.interest}</span>.
+                      Thank you, <strong className="text-[#FFFFFF]">{submittedData.name}</strong>. Your default email client should open automatically with your pre-filled inquiry to <span className="font-medium text-[#FFEE32]">kendudxp@gmail.com</span>.
                     </p>
                   </div>
 
@@ -194,7 +205,7 @@ export const PartnershipSection: React.FC = () => {
                       Initiate a Partnership
                     </h3>
                     <p className="text-xs sm:text-sm text-[#D6D6D6]/70 mt-1">
-                      Fill out this form to connect with our technical and investment leadership.
+                      Fill out this form to open your email client with a formatted message to our team.
                     </p>
                   </div>
 
@@ -301,17 +312,10 @@ export const PartnershipSection: React.FC = () => {
                   <button
                     type="submit"
                     id="submit-inquiry-btn"
-                    disabled={isSubmitting}
-                    className="w-full mt-2 bg-[#FFEE32] hover:bg-[#ffe800] text-[#202020] py-3.5 px-6 rounded-full font-bold text-sm tracking-wide flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all cursor-pointer disabled:opacity-75"
+                    className="w-full mt-2 bg-[#FFEE32] hover:bg-[#ffe800] text-[#202020] py-3.5 px-6 rounded-full font-bold text-sm tracking-wide flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all cursor-pointer"
                   >
-                    {isSubmitting ? (
-                      <span>Transmitting Inquiry...</span>
-                    ) : (
-                      <>
-                        <span>Send Partnership Inquiry</span>
-                        <Send className="w-4 h-4 text-[#202020]" />
-                      </>
-                    )}
+                    <span>Send Partnership Inquiry</span>
+                    <Send className="w-4 h-4 text-[#202020]" />
                   </button>
 
                   <p className="text-[11px] text-center text-[#D6D6D6]/50 mt-2">
